@@ -452,27 +452,6 @@ html, body {
     margin-top: -15px;
     margin-bottom: 10px;
 }
-/* Botón de confirmación */
-.section-confirmacion-btn a, .playlist-btn a {
-    display: inline-block;
-    padding: 14px 35px;
-    font-size: 20px;
-    font-family: var(--font-2);
-    font-weight: bold;
-    background: linear-gradient(135deg, #48D1CC, #00CED1, #008B8B);
-    border-radius: 10px;
-    color: #fff;
-    text-decoration: none;
-    letter-spacing: 1px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    font-weight: 400;
-}
-/* Hover del botón */
-.section-confirmacion-btn a:hover, .playlist-btn a:hover {
-    transform: scale(1.08);
-    box-shadow: 0 0 25px rgba(72, 209, 204, 0.8);
-}
 .section-itinerario {
     width: 100%;
     min-height: 100vh;
@@ -508,27 +487,6 @@ html, body {
     font-style: normal;
 }
 /* Botón de direcciones */
-.direction-button {
-    display: inline-block;
-    padding: 14px 35px;
-    font-size: 20px;
-    font-family: var(--font-2);
-    font-weight: bold;
-    background: linear-gradient(135deg, #48D1CC, #00CED1, #008B8B);
-    border-radius: 10px;
-    color: #fff;
-    text-decoration: none;
-    letter-spacing: 1px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s 
-ease, box-shadow 0.3s 
-ease;
-    font-weight: 400;
-}
-.direction-button:hover {
-    transform: scale(1.08);
-    box-shadow: 0 0 15px rgba(72,209,204,0.7);
-}
 .section-gifts {
     width: 100%;
     min-height: 80vh;
@@ -697,25 +655,6 @@ ease;
     width: 100%;
     margin-top: -20px;
 }
-/* Botón */
-.upload-btn {
-    display: inline-block;
-    padding: 12px 28px;
-    font-size: 18px;
-    font-family: var(--font-2);
-    font-weight: bold;
-    background: linear-gradient(135deg, #48D1CC, #00CED1, #008B8B);
-    border-radius: 10px;
-    color: #fff;
-    text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    font-weight: 400;
-    margin-bottom: 20px;
-}
-.upload-btn:hover {
-    transform: scale(1.08);
-    box-shadow: 0 0 18px rgba(72,209,204,0.8);
-}
 .section-wishes {
     position: relative;
     width: 100%;
@@ -734,6 +673,7 @@ ease;
     background: linear-gradient(135deg, #48D1CC, #00CED1, #008B8B);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding: 10px;
 }
 #wish-form {
     display: flex;
@@ -757,41 +697,6 @@ ease;
     font-size: 16px;
     background: #f9f9f9;
     resize: none;
-}
-#wish-form button {
-    display: inline-block;
-    padding: 12px 28px;
-    font-size: 18px;
-    font-family: var(--font-2);
-    font-weight: bold;
-    background: linear-gradient(135deg, #48D1CC, #00CED1, #008B8B);
-    border-radius: 10px;
-    color: #fff;
-    text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    font-weight: 400;
-    margin-bottom: 20px;
-}
-#wish-form button:hover {
-    transform: scale(1.05);
-}
-#toggle-wishes-btn {
-    display: inline-block;
-    padding: 12px 28px;
-    font-size: 18px;
-    font-family: var(--font-2);
-    font-weight: bold;
-    background: linear-gradient(135deg, #48D1CC, #00CED1, #008B8B);
-    border-radius: 10px;
-    color: #fff;
-    text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    font-weight: 400;
-    margin-bottom: 20px;
-}
-#toggle-wishes-btn:hover {
-    transform: scale(1.05);
-    background: #00CED1;
 }
 #wishes-container {
     margin-top: 20px;
@@ -924,11 +829,7 @@ footer {
         .section span{
             font-size: 60px;
         }
-        button{
-            font-size: 50px;
-            margin-top: 40px;
-            margin-bottom: 40px;
-        }
+
         .galeria img{
             height: 300px;
             width: 300px;
@@ -1010,11 +911,6 @@ footer {
     .section span {
         font-size: 60px;
     }
-    button {
-        font-size: 50px;
-        margin-top: 40px;
-        margin-bottom: 40px;
-    }
     .galeria img {
         height: 300px;
         width: 300px;
@@ -1043,6 +939,59 @@ footer {
     animation: sparkle 2s infinite ease-in-out;
     z-index: 9999; /* siempre encima */
     pointer-events: none; /* no bloquea clics */
+  }
+  /* --- RESET para que <a> y <button> partan iguales --- */
+button, .btn {
+    -webkit-appearance: none;
+    appearance: none;
+    border: 0;
+    outline: none;
+    background: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    text-decoration: none;
+    line-height: 1; /* evita alturas raras */
+  }
+  
+  /* --- BOTÓN ÚNICO --- */
+  .btn {
+    display: inline-block;
+    padding: 14px 35px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #48D1CC, #00CED1, #008B8B);
+    color: #fff;
+    letter-spacing: 0.5px;
+    transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+    box-shadow: none;            /* sin sombras */
+    border: none;                /* sin bordes */
+    cursor: pointer;
+  }
+  
+  /* Hover / Active / Focus accesibles y elegantes */
+  .btn:hover { 
+    transform: translateY(-1px); 
+    filter: brightness(1.03);
+  }
+  .btn:active { 
+    transform: translateY(0); 
+    filter: brightness(.98);
+  }
+  .btn:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+  }
+  
+  /* Tamaños opcionales (si los quieres) */
+  .btn--sm { padding: 10px 22px; font-size: 16px; }
+  .btn--lg { padding: 16px 40px; font-size: 20px; }
+  
+  /* Ancho completo opcional */
+  .btn--block { display: block; width: 100%; }
+  
+  /* En pantallas grandes, si deseas subir tamaño de TODOS de una vez */
+  @media (min-width: 1025px) {
+    .btn { font-size: 20px; }
   }
   
   

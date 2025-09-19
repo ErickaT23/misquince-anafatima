@@ -123,7 +123,7 @@
           <span class="separator">|</span>
           <span class="time">16:00 hrs</span>
         </div>
-        <button type="button" class="direction-button" onclick="window.open('https://waze.com/ul/h9fxe5k69n','_blank')">Cómo llegar</button>
+        <button type="button" class="btn" onclick="window.open('https://waze.com/ul/h9fxe5k69n','_blank')">Cómo llegar</button>
       </div>
     </div>
   
@@ -145,7 +145,7 @@
           <span class="separator">|</span>
           <span class="time">18:30 hrs</span>
         </div>
-        <button type="button" class="direction-button" onclick="window.open('https://waze.com/ul/h9fxe6bj1s','_blank')">Cómo llegar</button>
+        <button type="button" class="btn" onclick="window.open('https://waze.com/ul/h9fxe6bj1s','_blank')">Cómo llegar</button>
       </div>
     </div>
   </section>
@@ -160,7 +160,7 @@
             <h1>Confirmación de Asistencia</h1>
             <p>Por favor, confirme su asistencia lo antes posible.</p>
             <div class="section-confirmacion-btn">
-              <a id="link-confirmacion" target="_blank">Confirmar Asistencia</a>
+              <a id="link-confirmacion" target="_blank" class="btn">Confirmar Asistencia</a>
             </div>
           </section>
     <!-- Sección de Imagen -->
@@ -209,7 +209,7 @@
   
     <!-- Botón para enviar canciones -->
     <div class="playlist-btn">
-      <a href="https://open.spotify.com/playlist/0LT3y21lAjaRSYdHJZ2X0V?si=623d51ccf7b3453a" target="_blank">
+      <a href="https://open.spotify.com/playlist/0LT3y21lAjaRSYdHJZ2X0V?si=623d51ccf7b3453a" target="_blank" class="btn">
         Agregar Canciones
       </a>
     </div>
@@ -243,7 +243,7 @@
             <div class="qr-container">
                 <img src="/imagenes/QR.png" alt="Escanea el QR" width="250">
                 <p>Escanea el código QR o usa el botón para subir tus fotos al álbum digital</p>
-                <a class="upload-btn" href="https://drive.google.com/drive/folders/1e-WiMSMf2dwYoSqBtq67-WFaTK4JUktH?usp=drive_link" target="_blank">
+                <a class="btn" href="https://drive.google.com/drive/folders/1e-WiMSMf2dwYoSqBtq67-WFaTK4JUktH?usp=drive_link" target="_blank">
                 Subir Fotos</a>
              </div>
         </section>
@@ -255,11 +255,11 @@
         <div id="wish-form">
       <input id="wish-name" type="text" placeholder="Tu nombre">
       <textarea id="wish-message" placeholder="Tu mensaje"></textarea>
-      <button id="submit-wish">Enviar</button>
+      <button id="submit-wish" class="btn">Enviar</button>
         </div>
         <!-- Botón para leer deseos -->
         <div style="margin-top: 1rem; text-align: center;">
-        <button id="toggle-wishes-btn">Leer los deseos</button>
+        <button id="toggle-wishes-btn" class="btn">Leer los deseos</button>
         </div>
         <!-- Contenedor oculto que se mostrará al hacer clic -->
         <div id="wishes-container" class="hidden" data-loaded="false" style="margin-top: 1rem; max-height: 300px; overflow-y: auto;"></div>
