@@ -17,6 +17,13 @@ body {
     font-family: 'cormorant garamond';
     font-style: italic;
 }
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* evita desplazamiento horizontal */
+    width: 100%;
+  }
+  
 #envelope {
     position: fixed;
     top: 0;
@@ -64,10 +71,20 @@ body {
     cursor: pointer;
     transition: opacity 1s ease-in-out;
     z-index: 11;
+    
 }
 #seal h2 {
     margin: 0;
-    font-size: 25px;
+    background: linear-gradient(90deg, #ffffff, #faf2ff, #d1d1d1, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 128, 128, 0.385),
+                 0 0 8px rgba(255, 255, 255, 0.1);
+    animation: shine 4s linear infinite;
+    font-weight: 400;
+    font-family: var(--font-1);
+    font-size: 30px;
 }
 #invitacion {
     display: none;
@@ -203,7 +220,6 @@ body {
     justify-content: center; /* centrado horizontal */
     align-items: center;     /* centrado vertical */
 }
-
 .section-calendar a {
     text-decoration: none;
     font-size: 1rem;
@@ -219,12 +235,10 @@ body {
     transition: all 0.3s ease;
     animation: shine 1.5s infinite linear;
 }
-
 .section-calendar a:hover {
     background-color: MediumTurquoise;
     color: #fff;
 }
-
 /* Música integrada */
 .section-music {
     margin-top: 30px;
@@ -241,6 +255,26 @@ body {
     width: 100%;
     max-width: 300px;
 }
+.bloque-con-bola {
+    position: relative;
+  }
+  
+  .foto-con-bola img,
+  .section-blessings {
+    display: block;
+    width: 100%;
+  }
+  
+  .bola-disco {
+    position: absolute;
+    top: 50%;       /* mitad del bloque (entre las dos secciones) */
+    left: 50%;
+    transform: translate(-50%, -50%); /* centrado perfecto */
+    width: 350px;   /* ajusta el tamaño a tu gusto */
+    z-index: 5;     /* arriba de todo */
+    animation: flash 2s infinite linear;
+  }
+  
 .section-image {
     width: 100%;
     display: flex;
@@ -327,6 +361,7 @@ body {
     color: mediumturquoise;
     font-weight: 400;
     font-style: italic;
+    margin-top: 70px;
 }
 
 .section-invitados h2 {
@@ -341,6 +376,7 @@ body {
     display: inline-block;
     overflow: hidden;
     padding: 10px;
+    margin-top: -20px;
 }
 .section-invitados h2::after {
     content: "";
@@ -364,7 +400,24 @@ body {
     font-family: var(--font-1);
     color: #008B8B;
     margin: 5px 0;
+    margin-top: -10px;
 }
+.bola-disco-lateral {
+    position: absolute;
+    top: 50%;         /* a la mitad de la sección */
+    right: -60px;     /* que sobresalga un poco fuera del borde derecho */
+    transform: translateY(-50%);
+    width: 120px;     /* tamaño ajustable */
+    z-index: 3;
+    animation: flash 2s infinite linear;
+    pointer-events: none; /* para que no bloquee clics */
+  }
+  
+  .section-invitados {
+    position: relative; /* necesario para que la bola se posicione respecto a esta sección */
+    text-align: center;
+  }
+  
 .section-confirmacion {
     position: relative;
     width: 100%;
@@ -974,3 +1027,22 @@ footer {
         margin-top: 0px;
     }
 }
+@keyframes sparkle {
+    0% { opacity: 0; transform: scale(0.5) rotate(0deg); }
+    50% { opacity: 1; transform: scale(1) rotate(45deg); }
+    100% { opacity: 0; transform: scale(0.5) rotate(90deg); }
+  }
+  
+  .sparkle {
+    position: fixed; /* ya no absolute, así cubre toda la ventana */
+    width: 4px;      /* más finitas */
+    height: 4px;
+    background: linear-gradient(135deg, #ffffff, #e0e0e0, #b0b0b0);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    box-shadow: 0 0 8px rgba(255,255,255,0.8);
+    animation: sparkle 2s infinite ease-in-out;
+    z-index: 9999; /* siempre encima */
+    pointer-events: none; /* no bloquea clics */
+  }
+  
+  
