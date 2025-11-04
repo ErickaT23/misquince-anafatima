@@ -1081,7 +1081,175 @@ button, .btn {
   
   /* En pantallas grandes, si deseas subir tamaño de TODOS de una vez */
   @media (min-width: 1025px) {
-    .btn { font-size: 20px; }
+    body {
+      max-width: 1440px;
+      margin: 0 auto;
+      text-align: center;
+      align-items: center;
+    }
+.bolas-disco {
+    position: absolute;
+    top: -250px;
+    width: 1150px;
+}
+.portada h1 {
+    font-size: 190px;
+    margin-top: 300px;
+}
+.bola-disco-1 {
+    position: absolute;
+    top: -310px;
+    right: -140%;
+    transform: translateX(-50%);
+    width: 750px;
+}
+.section-countdown {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+}
+.section-music {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    margin-top: -200px;
+}
+.bola-disco-2 {
+    position: absolute;
+    top: 510px;
+    left: -20%;
+    transform: translateX(-50%);
+    width: 600px;
+}
+.section-music audio {
+    width: 100%;
+    width: 500px;
+}
+.bola-disco {
+    position: absolute;
+    top: 32%;
+    left: -20%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+}
+.section-blessings {
+    position: relative;
+    width: 500%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: -1;
+    padding: 0;
+}
+    .section,
+    .section-blessings,
+    .section-invitados,
+    .section-confirmacion,
+    .section-itinerario,
+    .section-gifts,
+    .section-dresscode,
+    .section-playlist,
+    .section-galeria,
+    .section-album,
+    .section-wishes,
+    .section-quote {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px;
+    }
+  
+    .section h1,
+    .section h2,
+    .section h3,
+    .section-blessings h1,
+    .section-invitados h1,
+    .section-invitados h2,
+    .section-confirmacion h1,
+    .section-itinerario h2,
+    .section-gifts h2,
+    .section-dresscode h2,
+    .section-playlist h2,
+    .section-album h2,
+    .section-quote h1 {
+      font-size: 50px;
+    }
+  
+    .section p,
+    .section-confirmacion p,
+    .section-gifts p,
+    .section-dresscode p,
+    .section-playlist p,
+    .section-album p,
+    .section-quote p,
+    .qr-container p {
+      font-size: clamp(18px, 2vw, 26px);
+      line-height: 1.6;
+    }
+  
+    .countdown-circle {
+      width: 160px;
+      height: 160px;
+    }
+  
+    .countdown-circle span {
+      font-size: 32px;
+    }
+  
+    .galeria img {
+      width: 250px;
+      height: 250px;
+    }
+  
+    .section-calendar a,
+    .btn,
+    .btn--lg {
+      font-size: 24px;
+      padding: 18px 40px;
+    }
+  
+    .section-music audio {
+      max-width: 500px;
+    }
+  
+    .qr-container {
+      max-width: 600px;
+    }
+  
+    #wish-form {
+      max-width: 700px;
+    }
+  
+    #wishes-container {
+      max-width: 800px;
+    }
+  
+    .section-social-icons i {
+      font-size: 48px;
+    }
+  
+    .bola-disco,
+    .bola-disco1,
+    .bola-disco2,
+    .bola-disco3,
+    .bola-disco4,
+    .bola-disco5,
+    .bola-disco6,
+    .bola-disco7,
+    .bola-disco8,
+    .bola-disco9 {
+      transform: scale(1.2);
+    }
   }
   
   
