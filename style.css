@@ -229,7 +229,7 @@ html, body {
     font-size: 1em;
     padding: 0;
     font-family: var(--font-2);
-    color: lightskyblue;
+    color: SteelBlue;
 }
 /* Botón calendario */
 .section-calendar {
@@ -247,7 +247,7 @@ html, body {
     font-family: var(--font-2);
     font-weight: 400;
     font-style: italic;
-    color: lightskyblue;
+    color: SteelBlue;
     background: #fff; /* fondo blanco para botón */
     border-radius: 10px;
     padding: 10px 20px;
@@ -257,7 +257,7 @@ html, body {
     animation: shine 1.5s infinite linear;
 }
 .section-calendar a:hover {
-    background-color: lightskyblue;
+    background-color: SteelBlue;
     color: #fff;
 }
 /* Música integrada */
@@ -311,7 +311,7 @@ html, body {
 /* Texto */
 .section-blessings h1 {
     font-size: 30px;
-    color: lightskyblue;
+    color: SteelBlue;
     font-family: var(--font-2);
     font-weight: 400;
     margin-bottom: 15px;
@@ -323,7 +323,7 @@ html, body {
     font-size: 60px;
     font-family: var(--font-1);
     font-weight: 400;
-    background: linear-gradient(135deg, #E0F7FA, #81D4FA, #4FC3F7);
+    background: linear-gradient(135deg, #B0D8E8, #4682B4, #2C577A);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-top: -20px;
@@ -446,18 +446,18 @@ html, body {
 .section-confirmacion h1, .itinerary-card h2 {
     font-size: 40px;
     font-family: var(--font-1);
-    background: linear-gradient(135deg, #E0F7FA, #81D4FA, #4FC3F7);
+    background: linear-gradient(135deg, #B0D8E8, #4682B4, #2C577A);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 400;
     padding: 10px;
     margin-top: -15px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
 }
 /* Texto descriptivo */
 .section-confirmacion p, .itinerary-card p, .section-dresscode p, .section-gifts p, .section-playlist p, .qr-container p  {
     font-size: 22px;
-    color: lightskyblue;
+    color: SteelBlue;
     font-family: var(--font-2);
     font-weight: 400;
     font-style: italic;
@@ -485,7 +485,7 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
     transition: transform 0.3s ease;
   }
   .itinerary-card:hover { transform: scale(1.03); }
@@ -493,7 +493,7 @@ html, body {
   /* Fecha y hora */
   .time-location {
     font-size: 22px;
-    color: lightskyblue;
+    color: SteelBlue;
     font-family: var(--font-2);
     font-weight: 400;
     margin-top: -15px;
@@ -574,7 +574,7 @@ html, body {
     font-size: 40px;
     font-family: var(--font-1);
     margin: 20px 0 10px 0;
-    background: linear-gradient(135deg, #E0F7FA, #81D4FA, #4FC3F7);
+    background: linear-gradient(135deg, #B0D8E8, #4682B4, #2C577A);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 400;
@@ -643,7 +643,7 @@ html, body {
 }
 /* Card de galería */
 .galeria-card {
-    background: lightskyblue3d; /* blanco translúcido */
+    background: SteelBlue3d; /* blanco translúcido */
     max-width: 700px;
     width: 90%;
     border-radius:5%;
@@ -711,7 +711,7 @@ html, body {
     font-size: 40px;
     font-family: var(--font-1);
     margin: 20px 0 10px 0;
-    background: linear-gradient(135deg, #E0F7FA, #81D4FA, #4FC3F7);
+    background: linear-gradient(135deg, #B0D8E8, #4682B4, #2C577A);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 400;
@@ -722,7 +722,7 @@ html, body {
     font-size: 38px;
     font-family: var(--font-1);
     margin-bottom: 30px;
-    background: linear-gradient(135deg, #E0F7FA, #81D4FA, #4FC3F7);
+    background: linear-gradient(135deg, #B0D8E8, #4682B4, #2C577A);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding: 10px;
@@ -753,7 +753,7 @@ html, body {
     font-size: 45px;
     font-family: var(--font-1);
     margin: 20px 0;
-    background: linear-gradient(135deg, #E0F7FA, #81D4FA, #4FC3F7);
+    background: linear-gradient(135deg, #B0D8E8, #4682B4, #2C577A);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding: 10px;
