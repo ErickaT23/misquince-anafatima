@@ -1,5 +1,5 @@
 :root {
-    --color-1: silver;
+    --color-1: #2C577A;
     --font-1:"Imperial Script", cursive;
     --font-32:"Cormorant", serif;
     --scroll-animation-duration: 0.5s;
@@ -75,12 +75,7 @@ html, body {
 }
 #seal h2 {
     margin: 0;
-    background: linear-gradient(90deg, #ffffff, #faf2ff, #ffff, #ffffff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    text-shadow: 2px 2px 4px rgba(154, 208, 208, 0.64),
-                 0 0 8px rgba(255, 255, 255, 0.1);
+    color: white;
     animation: shine 4s linear infinite;
     font-weight: 400;
     font-family: var(--font-1);
@@ -105,10 +100,7 @@ html, body {
     font-family: var(--font-1);
     font-size: 65px;
     font-weight: 500;
-    background: linear-gradient(90deg, #ffffff, #faf2ff, #ffff, #ffffff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
+    color: #2C577A;
     text-shadow: 2px 2px 4px rgba(154, 208, 208, 0.64),
     animation: shine 4s linear infinite;
     margin-top: 200px;
@@ -154,16 +146,14 @@ html, body {
     font-family: var(--font-1);
     font-weight: 400;
     font-style: italic;
-    background: linear-gradient(90deg, #ffffff, #faf2ff, #ffff, #ffffff);
-    -webkit-background-clip: text;
-    color: transparent;
+    color: #2C577A;
     animation: shine 1.5s infinite linear;
 }
 .section-countdown p {
     margin: 0;
     font-size: 22px;
     padding: 15px;
-    color: white;
+    color: #2C577A;
     font-family: var(--font-2);
     font-weight: 400;
     font-style: italic;
@@ -172,7 +162,7 @@ html, body {
     font-size: 30px;
     margin: 0;
     padding: 15px;
-    color: white;
+    color: #2C577A;
     font-family: var(--font-2);
     font-weight: 400;
     font-style: italic;
@@ -365,13 +355,13 @@ html, body {
     align-items: center;
     text-align: center;
     margin: 0;
-    z-index: -1;
+    z-index: 1;
 }
 .section-invitados h1 {
     font-size: 30px;
     font-family: var(--font-2);
     margin-bottom: 10px;
-    color: white;
+    color: #2C577A;
     font-weight: 400;
     font-style: italic;
 }
@@ -379,15 +369,13 @@ html, body {
     font-size: 45px;
     font-family: var(--font-1);
     font-weight: 400;
-    background: linear-gradient(135deg, #FFFFFF, #F7F7F9, #EFEFF2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     margin: 10px 0;
     position: relative;
     display: inline-block;
     overflow: hidden;
     padding: 10px;
     margin-top: -20px;
+    color: #2C577A;
 }
 .section-invitados h2::after {
     content: "";
@@ -396,12 +384,6 @@ html, body {
     left: -100%;
     width: 80%;
     height: 100%;
-    background: linear-gradient(
-        120deg,
-        transparent 0%,
-        rgba(255, 255, 255, 0.8) 50%,
-        transparent 100%
-    );
     transform: skewX(-25deg);
     animation: shine 3s infinite;
 }
@@ -409,7 +391,7 @@ html, body {
 .section-invitados h3 {
     font-size: 25px;
     font-family: var(--font-1);
-    color: white;
+    color: #2C577A;
     margin: 5px 0;
     margin-top: -10px;
 }
@@ -440,7 +422,7 @@ html, body {
     align-items: center;
     text-align: center;
     margin: 0;
-    z-index: -1;
+    z-index: 1;
 }
 /* Título principal */
 .section-confirmacion h1, .itinerary-card h2 {
@@ -818,12 +800,7 @@ html, body {
     padding: 10px;
     font-family: var(--font-1);
     font-weight: 500;
-    background: linear-gradient(90deg, #ffffff, #faf2ff, #ffff, #ffffff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-                 0 0 8px rgba(255, 255, 255, 0.1);
-    animation: shine 4s linear infinite;
+    color: #2C577A;
 }
 .bola-disco9 {
     position: absolute;
