@@ -586,7 +586,7 @@ html, body {
   /* Bola disco – esquina superior izquierda por defecto */
 .bola-disco7 {
     position: absolute;
-    top: 500px;
+    top: 550px;
     right: -73px;
     width: 520px;
     z-index: 5;
