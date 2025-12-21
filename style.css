@@ -75,7 +75,7 @@ html, body {
 }
 #seal h2 {
     margin: 0;
-    color: white;
+    color: #2C577A;
     animation: shine 4s linear infinite;
     font-weight: 400;
     font-family: var(--font-1);
