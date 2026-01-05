@@ -94,6 +94,7 @@ html, body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    flex-direction: column;
   }
   /* Texto principal */
   .portada h1 {
@@ -105,6 +106,16 @@ html, body {
     animation: shine 4s linear infinite;
     margin-top: 200px;
   }
+    /* Texto principal */
+    .portada h2 {
+        font-family: var(--font-1);
+        font-size: 65px;
+        font-weight: 500;
+        color: #2C577A;
+        text-shadow: 2px 2px 4px rgba(154, 208, 208, 0.64), animation: shine 4s linear infinite;
+        margin-top: -65px;
+        margin-bottom: 5px;
+      }
   /* Imagen bolas disco */
   .bolas-disco {
     position: absolute;
@@ -527,7 +538,7 @@ html, body {
   .bola-disco5 {
     position: absolute;
     top: -87px;     /* visible desde el inicio */
-    right: -29px;   /* pegada al borde con margen */
+    right: 5px;   /* pegada al borde con margen */
     width: 420px;
     z-index: 5;
     pointer-events: none;
@@ -1072,6 +1083,10 @@ button, .btn {
 .portada h1 {
     font-size: 190px;
     margin-top: 300px;
+}
+.portada h2 {
+    font-size: 190px;
+    margin-top: -100px;
 }
 .bola-disco-1 {
     position: absolute;
