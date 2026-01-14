@@ -99,41 +99,53 @@ function elegirAplicacionOtraDireccion() {
 }
 
 // script-invitados.js
-// script-invitados.js
 document.addEventListener("DOMContentLoaded", () => {
-  // Obtener id desde la URL (ejemplo: ?id=2)
   const params = new URLSearchParams(window.location.search);
-  const id = parseInt(params.get("id"));
-
-  // Buscar invitado
-  const invitado = invitados.find(inv => inv.id === id);
+  const idParam = params.get("id");
+  const id = idParam ? parseInt(idParam, 10) : NaN;
 
   const nombreEl = document.getElementById("nombre-invitado");
   const textoPasesEl = document.getElementById("texto-pases");
   const numPasesEl = document.getElementById("num-pases");
+  const textoMomentoEl = document.getElementById("texto-momento");
 
-  if (invitado) {
-    nombreEl.textContent = invitado.nombre;
+  // Si falta algún elemento en el HTML, no reventamos
+  if (!nombreEl || !textoPasesEl || !numPasesEl) return;
 
-    if (invitado.pases === 1) {
-      textoPasesEl.textContent = "Hemos reservado para ti";
-      numPasesEl.textContent = "1 pase";
-    } else if (invitado.pases > 1) {
-      textoPasesEl.textContent = "Hemos reservado para ustedes";
-      numPasesEl.textContent = `${invitado.pases} pases`;
-    } else {
-      // Por si hay invitados con 0 pases
-      textoPasesEl.textContent = "";
-      numPasesEl.textContent = "";
-    }
-
-  } else {
-    // Invitado no encontrado
+  // Validación: si "invitados" no existe, el problema es el orden del script
+  if (typeof invitados === "undefined") {
     nombreEl.textContent = "Invitado Especial";
+    textoPasesEl.textContent = "";
+    numPasesEl.textContent = "";
+    return;
+  }
+
+  const invitado = invitados.find(inv => inv.id === id);
+
+  if (!invitado) {
+    nombreEl.textContent = "Invitado Especial";
+    textoPasesEl.textContent = "";
+    numPasesEl.textContent = "";
+    return;
+  }
+
+  nombreEl.textContent = invitado.nombre;
+
+  if (invitado.pases === 1) {
+    textoPasesEl.textContent = "Hemos reservado para ti";
+    numPasesEl.textContent = "1 pase";
+    if (textoMomentoEl) textoMomentoEl.textContent = "Este momento no estaría completo sin ti";
+  } else if (invitado.pases > 1) {
+    textoPasesEl.textContent = "Hemos reservado para ustedes";
+    numPasesEl.textContent = `${invitado.pases} pases`;
+    if (textoMomentoEl) textoMomentoEl.textContent = "Este momento no estaría completo sin ustedes";
+  } else {
+    // Para casos como pases: 0
     textoPasesEl.textContent = "";
     numPasesEl.textContent = "";
   }
 });
+
 
 
   document.addEventListener("DOMContentLoaded", () => {
