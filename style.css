@@ -1128,21 +1128,88 @@ button, .btn {
 }
 .bola-disco {
     position: absolute;
-    top: 32%;
-    left: -20%;
+    top: -10%;
+    left: 1%;
     transform: translate(-50%, -50%);
-    width: 150px;
+    width: 760px;
+}
+.bola-disco-lateral {
+    position: absolute;
+    top: -15%;
+    right: -270px;
+    transform: translateY(-50%);
+    width: 500px;
+}
+.bola-disco3 {
+    position: absolute;
+    top: -19%;
+    right: 600px;
+    transform: none;
+    width: 550px;
 }
 .section-blessings {
     position: relative;
-    width: 500%;
+    width: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    z-index: -1;
+    z-index: 1;
     padding: 0;
+    margin: 0;
+}
+.section-itinerario{
+    padding: 20px;
+}
+.section-confirmacion{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 250px;
+    padding: 20px;
+    margin-bottom: 80px;
+}
+.bola-disco5{
+    position: absolute;
+    top: -180px;
+    right: 30px;
+    width: 710px;
+}
+.section-gifts{
+    margin-bottom: 100px;
+    padding: 20px;
+}
+.bola-disco6{
+    top: -390px;
+    right: -320px;
+    width: 600px;
+}
+.section-playlist{
+    margin-top: -100px;
+}
+.bola-disco7{
+    top: 600px;
+    right: 17px;
+    width: 750px;
+}
+.section-galeria{
+    padding: 20px;
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+.bola-disco8{
+    top: 750px;
+    right: -600px;
+    width: 650px;
+}
+.bola-disco9{
+    right: -700px;
+    width: 800px;
+    top: -150px;
 }
     .section,
     .section-blessings,
@@ -1156,9 +1223,9 @@ button, .btn {
     .section-album,
     .section-wishes,
     .section-quote {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 10px;
+      max-width: auto;
+      height: auto;
+      width: auto;
     }
   
     .section h1,
