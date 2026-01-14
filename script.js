@@ -109,11 +109,11 @@ document.addEventListener("DOMContentLoaded", () => {
   
     if (invitado) {
       document.getElementById("nombre-invitado").textContent = invitado.nombre;
-      document.getElementById("num-pases").textContent = `${invitado.pases} pase${invitado.pases > 1 ? "s" : ""} con mucho cariño`;
+      document.getElementById("num-pases").textContent = `${invitado.pases} pase${invitado.pases > 1 ? "" : ""}`;
     } else {
       // Si no hay coincidencia
       document.getElementById("nombre-invitado").textContent = "Invitado Especial";
-      document.getElementById("num-pases").textContent = "Pases reservados con mucho cariño";
+      document.getElementById("num-pases").textContent = "";
     }
   });
 
