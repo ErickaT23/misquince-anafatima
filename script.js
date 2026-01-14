@@ -99,23 +99,42 @@ function elegirAplicacionOtraDireccion() {
 }
 
 // script-invitados.js
+// script-invitados.js
 document.addEventListener("DOMContentLoaded", () => {
-    // Obtener id desde la URL (ejemplo: ?id=2)
-    const params = new URLSearchParams(window.location.search);
-    const id = parseInt(params.get("id"));
-  
-    // Buscar en el archivo invitados.js
-    const invitado = invitados.find(inv => inv.id === id);
-  
-    if (invitado) {
-      document.getElementById("nombre-invitado").textContent = invitado.nombre;
-      document.getElementById("num-pases").textContent = `${invitado.pases} pase${invitado.pases > 1 ? "" : ""}`;
+  // Obtener id desde la URL (ejemplo: ?id=2)
+  const params = new URLSearchParams(window.location.search);
+  const id = parseInt(params.get("id"));
+
+  // Buscar invitado
+  const invitado = invitados.find(inv => inv.id === id);
+
+  const nombreEl = document.getElementById("nombre-invitado");
+  const textoPasesEl = document.getElementById("texto-pases");
+  const numPasesEl = document.getElementById("num-pases");
+
+  if (invitado) {
+    nombreEl.textContent = invitado.nombre;
+
+    if (invitado.pases === 1) {
+      textoPasesEl.textContent = "Hemos reservado para ti";
+      numPasesEl.textContent = "1 pase";
+    } else if (invitado.pases > 1) {
+      textoPasesEl.textContent = "Hemos reservado para ustedes";
+      numPasesEl.textContent = `${invitado.pases} pases`;
     } else {
-      // Si no hay coincidencia
-      document.getElementById("nombre-invitado").textContent = "Invitado Especial";
-      document.getElementById("num-pases").textContent = "";
+      // Por si hay invitados con 0 pases
+      textoPasesEl.textContent = "";
+      numPasesEl.textContent = "";
     }
-  });
+
+  } else {
+    // Invitado no encontrado
+    nombreEl.textContent = "Invitado Especial";
+    textoPasesEl.textContent = "";
+    numPasesEl.textContent = "";
+  }
+});
+
 
   document.addEventListener("DOMContentLoaded", () => {
     const params = new URLSearchParams(window.location.search);
