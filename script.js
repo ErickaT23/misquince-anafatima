@@ -148,22 +148,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const params = new URLSearchParams(window.location.search);
-    const id = parseInt(params.get("id"));
-    const invitado = invitados.find(inv => inv.id === id);
-  
-    const baseForm = "https://docs.google.com/forms/d/e/1FAIpQLSfSKRscViKRvMGlQg2QjwDsn4Gs1bqlwhaTObeau7QSJ-W23A/viewform?usp=pp_url";
-  
-    if (invitado) {
-      // Construir URL con valores dinámicos
-      const prefilled = `${baseForm}&entry.1297710131=${encodeURIComponent(invitado.nombre)}&entry.1099367965=${invitado.pases}`;
-      document.getElementById("link-confirmacion").setAttribute("href", prefilled);
-    } else {
-      // Si no hay ID válido, mandar al form vacío
-      document.getElementById("link-confirmacion").setAttribute("href", baseForm);
-    }
-  });
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const id = Number(params.get("id"));
+
+  // Buscar invitado por ID
+  const invitado = invitados.find(inv => inv.id === id);
+
+  // URL base del formulario (SIN valores)
+  const baseForm =
+    "https://docs.google.com/forms/d/e/1FAIpQLSfSKRscViKRvMGlQg2QjwDsn4Gs1bqlwhaTObeau7QSJ-W23A/viewform?usp=pp_url";
+
+  const link = document.getElementById("link-confirmacion");
+
+  if (invitado && link) {
+    // Prefill dinámico
+    const prefilled =
+      `${baseForm}` +
+      `&entry.1297710131=${encodeURIComponent(invitado.nombre)}` +
+      `&entry.1099367965=${encodeURIComponent(invitado.pases)}`;
+
+    link.href = prefilled;
+  } else if (link) {
+    // Fallback: formulario vacío
+    link.href = baseForm;
+  }
+});
+
   
 
 document.addEventListener("DOMContentLoaded", () => {
