@@ -1172,6 +1172,10 @@ button, .btn {
     margin-top: 250px;
     padding: 20px;
     margin-bottom: 80px;
+    z-index: 1;
+}
+.section-calendar{
+    z-index: 1;
 }
 .bola-disco5{
     position: absolute;
