@@ -153,5 +153,13 @@ const invitados = [
   { id: 151, nombre: "Luis Fernando Lima", pases: 1 },
   { id: 152, nombre: "Pedro Mazariegos", pases: 1 },
   { id: 153, nombre: "Diego Antillon", pases: 1 },
-  { id: 154, nombre: "Jose Carlos Orellana", pases: 1 }
+  { id: 154, nombre: "Jose Carlos Orellana", pases: 1 },
+  { id: 155, nombre: "Byron Salvatierra", pases: 1},
+  { id: 156, nombre: "Valeria García", pases: 1 },
+  { id: 157, nombre: "Fernando Osorio y Sra.", pases: 2 },
+  { id: 158, nombre: "Fernando Osorio Reyes e hijo", pases: 2 },
+  { id: 159, nombre: "Natalia Sahagun", pases: 1 },
+  { id: 160, nombre: "Natalia Muñoz", pases: 1 },
+  { id: 161, nombre: "Treyci García", pases: 2 },
+  { id: 162, nombre: "María Boden", pases: 2 }
 ];
