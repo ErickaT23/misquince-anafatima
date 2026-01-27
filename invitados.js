@@ -161,5 +161,8 @@ const invitados = [
   { id: 159, nombre: "Natalia Sahagun", pases: 1 },
   { id: 160, nombre: "Natalia Muñoz", pases: 1 },
   { id: 161, nombre: "Treyci García", pases: 2 },
-  { id: 162, nombre: "María Boden", pases: 2 }
+  { id: 162, nombre: "María Boden", pases: 2 },
+  { id: 163, nombre: "Ángel Peña", pases: 1 },
+  { id: 164, nombre: "⁠Natalia Leonardo", pases: 1},
+  { id: 165, nombre: "⁠Diego Gómez", pases: 1}
 ];
